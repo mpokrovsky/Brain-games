@@ -33,7 +33,6 @@
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
-    "@babel/preset-stage-0": "^7.0.0",
     "readline-sync": "^1.4.9"
   }
 }
