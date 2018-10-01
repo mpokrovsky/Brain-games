@@ -8,3 +8,4 @@ start:
 
 publish:
 	npm publish
+
