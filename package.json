@@ -1,10 +1,10 @@
 {
-  "name": "braingamesmpokrovsky",
-  "version": "1.0.0",
+  "name": "brain-games-mpokrovsky",
+  "version": "1.1.0",
   "description": "Brain games",
   "main": " ",
   "keywords": [
-    "brain game",
+    "brain games",
     "hexlet project1"
   ],
   "bin": {
@@ -32,7 +32,9 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-env": "^7.1.0"
+  },
+  "dependencies": {
     "readline-sync": "^1.4.9"
   }
 }
