@@ -2,10 +2,11 @@ parser: babel-eslint
 
 parserOptions:
   ecmaVersion: 6
-  sourceType: script
+  sourceType: module
+
 
 extends:
-  -'airbnb-base'
+  - 'airbnb-base'
 
 env:
   node: true
