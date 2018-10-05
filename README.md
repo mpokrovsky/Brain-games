@@ -5,3 +5,5 @@
 
 
 [![Build Status](https://travis-ci.org/mpokrovsky/project-lvl1-s352.svg?branch=master)](https://travis-ci.org/mpokrovsky/project-lvl1-s352)
+
+https://asciinema.org/a/qqyIfT24FTnrRPirOKVsevtpF

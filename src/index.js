@@ -1,46 +1,59 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from 'hexlet-pairs';
 
-const getUserName = () => {
+/*
+export const cons = (a, b) => pair => pair(a, b);
+
+export const car = pair => pair((a, b) => a);
+
+export const cdr = pair => pair((a, b) => b);
+*/
+
+export const getUserName = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   return userName;
 };
 
-const getRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const generateNum = () => {
+  const min = 1;
+  const max = 15;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
-const rule = 'Answer "yes" if number even otherwise answer "no".';
+const levels = (conditions, curLevel, attempts) => {
+  const condition = conditions();
+  const question = car(condition);
+  const correctAnswer = cdr(condition);
 
-const min = 0;
+  if (curLevel > attempts) {
+    return true;
+  }
 
-const max = 100;
+  console.log(`Question: ${question}`);
+  const answer = readlineSync.question('Your answer: ');
+  if (answer === correctAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer} `);
+    return false;
+  }
+  return levels(conditions, curLevel + 1, attempts);
+};
 
 const attempts = 3;
+const curLevel = 1;
 
-const isEven = num => num % 2 === 0;
-
-export const brainEven = () => {
+export const game = (rule, conditions) => {
   console.log('Welcome to the Brain Games!');
   console.log(rule);
   const userName = getUserName();
-  let counter = 0;
-  while (counter < attempts) {
-    const randomNum = getRandomNum(min, max);
-    const correctAnswer = isEven(randomNum) ? 'yes' : 'no';
-    console.log(`Question: ${randomNum}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer !== 'yes' && answer !== 'no') {
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-      counter += 1;
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n Let's try again, ${userName}!`);
-      return;
-    }
+  const isWin = levels(conditions, curLevel + 1, attempts);
+  if (isWin) {
+    console.log(`Congratulations, ${userName}!`);
+  } else {
+    console.log(`Let's try again, ${userName}!`);
   }
-  console.log(`Congratulations, ${userName}!`);
 };
 
-export default brainEven;
+// export default game;
