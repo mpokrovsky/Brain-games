@@ -8,10 +8,12 @@ const getSign = () => {
   return signs.charAt(Math.floor(Math.random() * signs.length));
 };
 
+const max = 15;
+
 const makeExpression = () => {
   const signNumber = getSign();
-  const arg1 = generateNum();
-  const arg2 = generateNum();
+  const arg1 = generateNum(max);
+  const arg2 = generateNum(max);
   switch (signNumber) {
     case '+': {
       const correctAnswer = String(arg1 + arg2);
