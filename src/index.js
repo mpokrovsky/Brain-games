@@ -1,14 +1,6 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-/*
-export const cons = (a, b) => pair => pair(a, b);
-
-export const car = pair => pair((a, b) => a);
-
-export const cdr = pair => pair((a, b) => b);
-*/
-
 export const getUserName = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -17,7 +9,7 @@ export const getUserName = () => {
 
 export const generateNum = () => {
   const min = 1;
-  const max = 15;
+  const max = 20;
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
@@ -35,14 +27,14 @@ const levels = (conditions, curLevel, attempts) => {
   if (answer === correctAnswer) {
     console.log('Correct!');
   } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer} `);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}' `);
     return false;
   }
   return levels(conditions, curLevel + 1, attempts);
 };
 
 const attempts = 3;
-const curLevel = 1;
+const curLevel = 0;
 
 export const game = (rule, conditions) => {
   console.log('Welcome to the Brain Games!');

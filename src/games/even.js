@@ -11,6 +11,5 @@ export const getConditions = () => {
   return cons(task, correctAnswer);
 };
 
-const brainEven = game(rule, getConditions());
-
+const brainEven = () => game(rule, getConditions);
 export default brainEven;
