@@ -20,3 +20,7 @@
 ### Brain-progression game:
 
 [![asciicast](https://asciinema.org/a/NEMe1OGFNnhT5ztOsZQcW3207.png)](https://asciinema.org/a/NEMe1OGFNnhT5ztOsZQcW3207)
+
+### Brain-prime game:
+
+[![asciicast](https://asciinema.org/a/PLOBVtX509aFXmsO9ofWFheZU.png)](https://asciinema.org/a/PLOBVtX509aFXmsO9ofWFheZU)
