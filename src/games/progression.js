@@ -31,6 +31,4 @@ export const getConditions = () => {
   return cons(task, correctAnswer);
 };
 
-const brainGcd = () => game(rule, getConditions);
-
-export default brainGcd;
+export default () => game(rule, getConditions);

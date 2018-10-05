@@ -14,25 +14,9 @@ const makeExpression = () => {
   const signNumber = getSign();
   const arg1 = generateNum(max);
   const arg2 = generateNum(max);
-  switch (signNumber) {
-    case '+': {
-      const correctAnswer = String(arg1 + arg2);
-      const task = `${arg1} + ${arg2}`;
-      return cons(task, correctAnswer);
-    }
-    case '-': {
-      const correctAnswer = String(arg1 - arg2);
-      const task = `${arg1} - ${arg2}`;
-      return cons(task, correctAnswer);
-    }
-    default: {
-      const correctAnswer = String(arg1 * arg2);
-      const task = `${arg1} * ${arg2}`;
-      return cons(task, correctAnswer);
-    }
-  }
+  const correctAnswer = String(arg1 + arg2);
+  const task = `${arg1} ${signNumber} ${arg2}`;
+  return cons(task, correctAnswer);
 };
 
-const brainCalc = () => game(rule, makeExpression);
-
-export default brainCalc;
+export default () => game(rule, makeExpression);
