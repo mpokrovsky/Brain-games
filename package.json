@@ -1,6 +1,6 @@
 {
   "name": "brain-games-mpokrovsky",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Brain games",
   "main": "",
   "keywords": [
@@ -13,7 +13,6 @@
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-progression": "dist/bin/brain-progression.js",
     "brain-prime": "dist/bin/brain-prime.js"
-
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
