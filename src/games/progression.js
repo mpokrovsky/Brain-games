@@ -1,33 +1,28 @@
-import { generateNum, game } from '..';
-import { cons, car, cdr } from 'hexlet-pairs';
+import game from '..';
+import generateNum from '../utils';
+import { cons } from 'hexlet-pairs';
 
 const rule = 'What number is missing in this progression?';
 
-const amount = 10;
+const length = 10;
 
 const max = 20;
+const min = 1;
 
-const generatePosition = () => Math.floor(Math.random() * amount);
+const generatePosition = () => Math.floor(Math.random() * length + 1);
 
-const generateProgression = () => {
-  const firstNum = generateNum(max);
-  const array = [firstNum];
-  const increment = generateNum(max);
-  let current = firstNum;
-  for (let i = 0; i < amount - 1; i += 1) {
-    current += increment;
+const getConditions = () => {
+  const firstNum = generateNum(min, max);
+  const array = [];
+  const increment = generateNum(min, max);
+  let current = 0;
+  for (let i = 0; i < length; i += 1) {
+    current = firstNum + increment * i;
     array.push(current);
   }
   const index = generatePosition();
-  const res = `${array.slice(0, index - 1)} .. ${array.slice(index)}`;
-  const correctAnswer = array[index - 1];
-  return cons(res, correctAnswer);
-};
-
-export const getConditions = () => {
-  const progression = generateProgression();
-  const task = car(progression);
-  const correctAnswer = String(cdr(progression));
+  const correctAnswer = String(firstNum + increment * (index - 1));
+  const task = `${array.slice(0, index - 1)} .. ${array.slice(index)}`;
   return cons(task, correctAnswer);
 };
 
