@@ -6,12 +6,9 @@ const rule = 'What number is missing in this progression?';
 
 const length = 10;
 
-const max = 20;
-const min = 1;
-
-const generatePosition = () => Math.floor(Math.random() * length + 1);
-
 const getConditions = () => {
+  let max = 20;
+  const min = 1;
   const firstNum = generateNum(min, max);
   const array = [];
   const increment = generateNum(min, max);
@@ -20,9 +17,11 @@ const getConditions = () => {
     current = firstNum + increment * i;
     array.push(current);
   }
-  const index = generatePosition();
-  const correctAnswer = String(firstNum + increment * (index - 1));
-  const task = `${array.slice(0, index - 1)} .. ${array.slice(index)}`;
+  max = 10;
+  const emptyPosition = generateNum(min, max);
+  array[emptyPosition - 1] = '..';
+  const correctAnswer = String(firstNum + increment * (emptyPosition - 1));
+  const task = array.join(' ');
   return cons(task, correctAnswer);
 };
 
