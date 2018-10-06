@@ -1,4 +1,5 @@
-import { generateNum, game } from '..';
+import game from '..';
+import generateNum from '../utils';
 import { cons } from 'hexlet-pairs';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -7,7 +8,7 @@ const isPrime = (num) => {
   if (num === 0 || num === 1) {
     return false;
   }
-  for (let i = num - 1; i > 1; i -= 1) {
+  for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -16,9 +17,10 @@ const isPrime = (num) => {
 };
 
 const max = 100;
+const min = 1;
 
 export const getConditions = () => {
-  const task = generateNum(max);
+  const task = generateNum(min, max);
   const correctAnswer = isPrime(task) ? 'yes' : 'no';
   return cons(task, correctAnswer);
 };

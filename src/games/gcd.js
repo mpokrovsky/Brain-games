@@ -1,4 +1,5 @@
-import { generateNum, game } from '..';
+import game from '..';
+import generateNum from '../utils';
 import { cons } from 'hexlet-pairs';
 
 const rule = 'Find the greatest common divisor of given numbers.';
@@ -17,10 +18,11 @@ const gcd = (num1, num2) => {
 };
 
 const max = 100;
+const min = 1;
 
 export const getConditions = () => {
-  const arg1 = generateNum(max);
-  const arg2 = generateNum(max);
+  const arg1 = generateNum(min, max);
+  const arg2 = generateNum(min, max);
   const task = `${arg1} ${arg2}`;
   const correctAnswer = String(gcd(arg1, arg2));
   return cons(task, correctAnswer);
