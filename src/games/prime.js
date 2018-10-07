@@ -6,7 +6,7 @@ const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   const absNum = Math.abs(num);
-  if (num === 0 || absNum === 1) {
+  if (num < 2) {
     return false;
   }
   for (let i = 2; i <= Math.floor(Math.sqrt(absNum)); i += 1) {
