@@ -16,7 +16,18 @@ const makeExpression = () => {
   const signNumber = getSign();
   const arg1 = generateNum(min, max);
   const arg2 = generateNum(min, max);
-  const correctAnswer = String(arg1 + arg2);
+  let correctAnswer = 0;
+  switch (signNumber) {
+    case '+':
+      correctAnswer = String(arg1 + arg2);
+      break;
+    case '-':
+      correctAnswer = String(arg1 - arg2);
+      break;
+    case '*':
+      correctAnswer = String(arg1 * arg2);
+      break;
+  }
   const task = `${arg1} ${signNumber} ${arg2}`;
   return cons(task, correctAnswer);
 };
