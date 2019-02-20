@@ -18,14 +18,14 @@ const makeExpression = () => {
   const arg2 = generateNum(min, max);
   let correctAnswer = 0;
   switch (signNumber) {
-    default '+':
-      correctAnswer = String(arg1 + arg2);
-      break;
     case '-':
       correctAnswer = String(arg1 - arg2);
       break;
     case '*':
       correctAnswer = String(arg1 * arg2);
+      break;
+    default:
+      correctAnswer = String(arg1 + arg2);
       break;
   }
   const task = `${arg1} ${signNumber} ${arg2}`;
