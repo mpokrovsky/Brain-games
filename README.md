@@ -11,16 +11,16 @@
 
 ### Brain-calc game:
 
-[![asciicast](https://asciinema.org/a/2WpkNg4m71xwRxNP9hVUdoHMC.png)](https://asciinema.org/a/2WpkNg4m71xwRxNP9hVUdoHMC)
+[![asciicast](https://asciinema.org/a/228664.png)](https://asciinema.org/a/228664)
 
 ### Brain-gcd game:
 
-[![asciicast](https://asciinema.org/a/1NsfTw7WQi3OVHR598Fxp1HHw.png)](https://asciinema.org/a/1NsfTw7WQi3OVHR598Fxp1HHw)
+[![asciicast](https://asciinema.org/a/228666.png)](https://asciinema.org/a/228666)
 
 ### Brain-progression game:
 
-[![asciicast](https://asciinema.org/a/yxsp5tXP0x4MJr9n4rrstQomh.png)](https://asciinema.org/a/yxsp5tXP0x4MJr9n4rrstQomh)
+[![asciicast](https://asciinema.org/a/228669.png)](https://asciinema.org/a/228669)
 
 ### Brain-prime game:
 
-[![asciicast](https://asciinema.org/a/PLOBVtX509aFXmsO9ofWFheZU.png)](https://asciinema.org/a/PLOBVtX509aFXmsO9ofWFheZU)
+[![asciicast](https://asciinema.org/a/228670.png)](https://asciinema.org/a/228670)
