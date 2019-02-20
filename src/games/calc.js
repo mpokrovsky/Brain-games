@@ -18,7 +18,7 @@ const makeExpression = () => {
   const arg2 = generateNum(min, max);
   let correctAnswer = 0;
   switch (signNumber) {
-    case '+':
+    default '+':
       correctAnswer = String(arg1 + arg2);
       break;
     case '-':
