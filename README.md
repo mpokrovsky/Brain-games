@@ -1,4 +1,4 @@
-# project-lvl1-s352
+## a console study project containing a few simple games with numbers 
 [![Maintainability](https://api.codeclimate.com/v1/badges/9c144fcbd1360013890d/maintainability)](https://codeclimate.com/github/mpokrovsky/project-lvl1-s352/maintainability)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/9c144fcbd1360013890d/test_coverage)](https://codeclimate.com/github/mpokrovsky/project-lvl1-s352/test_coverage)
