@@ -7,7 +7,7 @@
 
 ### Brain-even game:
 
-[![asciicast](https://asciinema.org/a/qqyIfT24FTnrRPirOKVsevtpF.png)](https://asciinema.org/a/qqyIfT24FTnrRPirOKVsevtpF)
+[![asciicast](https://asciinema.org/a/228619.png)](https://asciinema.org/a/228619)
 
 ### Brain-calc game:
 
