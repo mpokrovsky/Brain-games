@@ -1,4 +1,4 @@
-### Brain games
+# Brain games
 
 a console study project containing a few simple games with numbers for environment setting learning
 
